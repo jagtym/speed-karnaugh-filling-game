@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       width: {
         "box": "700px",
+        "purple-dark": "#4D3575",
+        "purple-light": "#5B4C8A"
       },
     },
   },

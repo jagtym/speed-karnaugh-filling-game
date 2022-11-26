@@ -25,12 +25,15 @@ function App() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="w-box">
-        <Header correct={correct} errors={errors} />
-        <h1 className="my-5 text-3xl">Current: {current}</h1>
-        <Gameboard fields={fields} click={fieldClicked} />
+    <div className="h-screen flex flex-col items-center">
+      <div className="flex flex-col justify-center items-center flex-1">
+        <div className="w-box flex: 1">
+          <Header correct={correct} errors={errors} />
+          <h1 className="my-5 text-3xl">Current: {current}</h1>
+          <Gameboard fields={fields} click={fieldClicked} />
+        </div>
       </div>
+      <footer className="">© 2022 Tymoteusz Jagła</footer>
     </div>
   );
 }

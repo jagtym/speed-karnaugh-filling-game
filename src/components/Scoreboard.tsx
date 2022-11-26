@@ -8,8 +8,8 @@ export function Scoreboard(props: IScoreboardProps) {
 
   return (
     <div className="flex gap-5">
-      <span>Correct: {correct} </span>
-      <span>Errors: {errors} </span>
+      <span className="text-2xl text-green-500">Correct: {correct} </span>
+      <span className="text-2xl text-red-600">Errors: {errors} </span>
     </div>
   );
 }

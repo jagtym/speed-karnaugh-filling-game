@@ -8,7 +8,7 @@ export function Clickable(props: IClickableProps) {
 
   return (
     <div
-      className="bg-slate-100 box-border h-28 rounded-3xl hover:bg-slate-400 transition-colors hover:cursor-pointer"
+      className="bg-gray-400 box-border h-28 rounded-3xl hover:bg-gray-600 transition-colors hover:cursor-pointer"
       onClick={() => {
         click(index);
       }}
