@@ -1,8 +1,15 @@
-export function Scoreboard() {
+interface IScoreboardProps {
+  correct: number;
+  errors: number;
+}
+
+export function Scoreboard(props: IScoreboardProps) {
+  const { correct, errors } = props;
+
   return (
     <div className="flex gap-5">
-      <span>Correct: 0</span>
-      <span>Errors: 0</span>
+      <span>Correct: {correct} </span>
+      <span>Errors: {errors} </span>
     </div>
   );
 }

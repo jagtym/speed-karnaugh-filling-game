@@ -1,11 +1,17 @@
 import { Clickable } from "./Clickable";
 
-export function Gameboard() {
-  const fields = [];
+interface IGameboardProps {
+  click: (index: number) => void;
+  fields: Array<number>;
+}
 
-  return (
-    <div className="grid grid-cols-4 gap-4">
-      <Clickable />
-    </div>
-  );
+export function Gameboard(props: IGameboardProps) {
+  const { click, fields } = props;
+
+  let clickables: Array<JSX.Element> = [];
+  fields.forEach((idx) => {
+    clickables.push(<Clickable index={idx} click={click} />);
+  });
+
+  return <div className="grid grid-cols-4 gap-4">{clickables}</div>;
 }
