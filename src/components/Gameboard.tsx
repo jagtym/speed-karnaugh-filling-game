@@ -13,5 +13,5 @@ export function Gameboard(props: IGameboardProps) {
     clickables.push(<Clickable index={idx} click={click} key={idx} />);
   });
 
-  return <div className="grid grid-cols-4 gap-4">{clickables}</div>;
+  return <div className="w-auto grid grid-cols-4 gap-4">{clickables}</div>;
 }

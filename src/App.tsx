@@ -6,7 +6,17 @@ function App() {
   const [correct, setCorrect] = useState(0);
   const [errors, setErrors] = useState(0);
 
-  const fields = [0, 1, 3, 2, 4, 5, 7, 6, 12, 13, 15, 14, 8, 9, 11, 10];
+  const [checked, setChecked] = useState(false);
+  const handleChange = () => {
+    setChecked(!checked);
+  };
+
+  const fields = !checked
+    ? [0, 1, 3, 2, 4, 5, 7, 6, 12, 13, 15, 14, 8, 9, 11, 10]
+    : [
+        0, 1, 3, 2, 4, 5, 7, 6, 12, 13, 15, 14, 8, 9, 11, 10, 16, 17, 19, 18,
+        20, 21, 23, 22, 28, 29, 31, 30, 24, 25, 27, 26,
+      ];
 
   const randomChoice = (array: Array<number>) => {
     const randIndex = Math.floor(Math.random() * array.length);
@@ -30,6 +40,14 @@ function App() {
         <div className="w-box flex: 1">
           <Header correct={correct} errors={errors} />
           <h1 className="my-5 text-3xl">Current: {current}</h1>
+          <div className="flex gap-2 mb-4">
+            <p className="text-red-400">Hard mode?</p>
+            <input
+              type="checkbox"
+              checked={checked}
+              onChange={handleChange}
+            ></input>
+          </div>
           <Gameboard fields={fields} click={fieldClicked} />
         </div>
       </div>
