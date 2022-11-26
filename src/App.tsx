@@ -14,10 +14,9 @@ function App() {
   const fields = !checked
     ? [0, 1, 3, 2, 4, 5, 7, 6, 12, 13, 15, 14, 8, 9, 11, 10]
     : [
-        0, 1, 3, 2, 4, 5, 7, 6, 12, 13, 15, 14, 8, 9, 11, 10, 16, 17, 19, 18,
-        20, 21, 23, 22, 28, 29, 31, 30, 24, 25, 27, 26,
+        0, 1, 3, 2, 4, 5, 7, 6, 12, 13, 15, 14, 8, 9, 11, 10, 24, 25, 27, 26,
+        28, 29, 31, 30, 20, 21, 23, 22, 16, 17, 19, 18,
       ];
-
   const randomChoice = (array: Array<number>) => {
     const randIndex = Math.floor(Math.random() * array.length);
     return array[randIndex];
