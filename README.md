@@ -1,4 +1,4 @@
-# Speed Carnaugh Filling Game
+# Speed Karnaugh Filling Game
 
 Game created to train myself to lose less time on Karnaugh table task on exam.
 Used tech: Typescript, React, Vite, TailwindCSS, Yarn
